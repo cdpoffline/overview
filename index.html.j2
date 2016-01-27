@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css"/>
+    <title>Offline Materials</title>
+  </head>
+  <body>
+    <div class="content">
+      <div id="listMaterials" class="section">
+      {# read about templates http://jinja.pocoo.org/docs/dev/templates/ #}
+      {% for material_name, material in materials.iteritems() %}
+        <a href="../{{ material_name }}" class="materialLink">
+          <div class="materialEntry">
+            <div class="materialImage">
+              <img src="../{{ material_name }}/{{ material.overview.image }}" />
+            </div>
+            <div class="materialDescription">
+              <div class="materialName">
+                {{ material.overview.name or material_name }}
+              </div>
+              <div class="materialText">
+                {{ material.overview.text }}
+              </div>
+            </div>
+          </div>
+        </a>
+      {% endfor %}
+      </div>
+    </div>
+  </body>
+</html>

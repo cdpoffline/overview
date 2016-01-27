@@ -2,5 +2,4 @@
 
 cd "`dirname $0`"
 
-modules_folder="`realpath ../..`"
-
+./create_index_file.py
