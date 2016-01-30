@@ -1,5 +1,6 @@
 <html>
   <head>
+    <meta charset="utf-8" />
     <link rel="stylesheet" href="style.css"/>
     <title>Offline Materials</title>
   </head>
@@ -7,22 +8,31 @@
     <div class="content">
       <div id="listMaterials" class="section">
       {# read about templates http://jinja.pocoo.org/docs/dev/templates/ #}
-      {% for material_name, material in materials.iteritems() %}
-        <a href="../{{ material_name }}" class="materialLink">
-          <div class="materialEntry">
-            <div class="materialImage">
-              <img src="../{{ material_name }}/{{ material.overview.image }}" />
-            </div>
-            <div class="materialDescription">
-              <div class="materialName">
-                {{ material.overview.name or material_name }}
-              </div>
-              <div class="materialText">
-                {{ material.overview.text }}
-              </div>
-            </div>
-          </div>
+      {% for category_name, category in overview.iteritems() %}
+        <a name="{{ category_name|e }}" href="#{{ category_name|e }}">
+          <div class="category">{{ category.get("name", category_name)|e }}</div>
         </a>
+        <div class="category_content">
+        {% for entry_name, entry in category.iteritems() if entry_name != "name" %}
+          <a href="../{{ entry.get("module")|e }}" class="materialLink">
+            <div class="materialEntry">
+              <div class="materialImage">
+                {% if "module" in entry and entry.image %}
+                <img src="../{{ entry.module|e }}/{{ entry.image|e }}" />
+                {% endif %}
+              </div>
+              <div class="materialDescription">
+                <div class="materialName">
+                  {{ entry.get("name", entry_name)|e }}
+                </div>
+                <div class="materialText">
+                  {{ entry.get("text")|e }}
+                </div>
+              </div>
+            </div>
+          </a>
+        {% endfor %}
+        </div>
       {% endfor %}
       </div>
     </div>
