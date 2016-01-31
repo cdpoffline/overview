@@ -8,12 +8,12 @@
     <div class="content">
       <div id="listMaterials" class="section">
       {# read about templates http://jinja.pocoo.org/docs/dev/templates/ #}
-      {% for category_name, category in overview.iteritems() %}
-        <a name="{{ category_name|e }}" href="#{{ category_name|e }}">
-          <div class="category">{{ category.get("name", category_name)|e }}</div>
+      {% for category in categories if category.name in overview %}
+        <a name="{{ category.name|e }}" href="#{{ category.name|e }}">
+          <div class="category">{{ category.get("text", category.name)|e }}</div>
         </a>
         <div class="category_content">
-        {% for entry_name, entry in category.iteritems() if entry_name != "name" %}
+        {% for entry_name, entry in overview[category.name].iteritems() if entry_name != "name" %}
           <a href="../{{ entry.get("module")|e }}" class="materialLink">
             <div class="materialEntry">
               <div class="materialImage">

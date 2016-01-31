@@ -2,4 +2,4 @@
 
 cd "`dirname $0`"
 
-./create_index_file.py
+./create_index_file.py "`pwd`"

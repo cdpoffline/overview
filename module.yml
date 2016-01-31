@@ -1,11 +1,12 @@
-overview:
-  beginners:
-    name: Anfänger  
-  blocks:
-    name: Blöcke
-  syntax:
-    name: Syntax
-  hardware:
-    name: Hardware
-  tools:
-    name: Werkzeuge
+categories:
+  - name: beginners
+    text: Anfänger  
+  - name: blocks
+    text: Blöcke
+  - name: syntax
+    text: Syntax
+  - name: hardware
+    text: Hardware
+  - name: tools
+    text: Werkzeuge
+

@@ -1,6 +1,7 @@
 #!/usr/bin/python
 
 import os
+import sys
 import pprint
 # see http://pyyaml.org/wiki/PyYAML#Documentation
 import yaml
@@ -11,8 +12,8 @@ CONFIGURATION_FILENAME = "module.yml"
 TEMPLATE_FILE = "../index.html.j2"
 INDEX_FILE = "../web/index.html"
 
-this_directory = os.path.dirname(__file__)
-modules_path = os.path.join(this_directory, "../..")
+this_directory = sys.argv[1]
+modules_path = os.path.dirname(os.path.dirname(os.path.join(this_directory)))
 module_names = os.listdir(modules_path)
 template_path = os.path.join(this_directory, TEMPLATE_FILE)
 index_path = os.path.join(this_directory, INDEX_FILE)
