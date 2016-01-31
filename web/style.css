@@ -1,28 +1,5 @@
 
-
-#exampleEntry {
-  height: 0px;
-  display: none;
-}
-
-.robotImage>img {
-  height: 100px;
-}
-
-.robotEntry:hover {
-  background-color: #eeeeee;
-}
-
-.robotEntry {
-  padding-top: 21px;
-  padding-bottom: 21px;
-  padding-left: 30px;
-  padding-right: 30px;
-  width: 100%;
-}
-
-.robotLink {
-}
+/* ---------------------- Links ----------------------- */
 /* http://www.ssi-developer.net/css/link-colours.shtml */
 a:link {
   color: #000000;
@@ -41,72 +18,57 @@ a:hover {
   text-decoration: none; 
 }
 
-/* divs in a row http://stackoverflow.com/a/2375967/1320237 */
-.robotImage {
-  display: inline-block; /* http://www.webmasterworld.com/css/3618505.htm */
-  padding-right: 30px;
-  vertical-align: middle;
-  height: 100px;
-}
-
-.robotDescription {
-  display: inline-block; /* http://www.webmasterworld.com/css/3618505.htm */
-  margin: 0px;
-  padding: 0px;
-  vertical-align: middle;
-}
-
-.robotAddress {
-
-}
-
+/* ----------------------Content ----------------------- */
 .content {
+  font-size: 30px;
+}
+
+/* ----------------------  ----------------------- */
+
+.category {
   font-size: 40px;
+  text-align: center;
+  width: 100%;
+  background: #2E7AC7;
+  color: #ffffff;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
-.heading {
+.category_content {
+  margin-left: 10px;
+  overflow: hidden; 
+}
+
+.entry {
+  background: #61C93F;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  max-width: 400px;
+  clear: none;
+  float: left;
+}
+
+.entry_heading {
   font-size: 40px;
-  display: inline-block; /* http://www.webmasterworld.com/css/3618505.htm */
-  padding-right: 30px;
-  padding-left: 30px;
-  padding-top: 21px;
-  padding-bottom: 21px;
-  margin: 0px;
+  text-align: center;
+  background: #61C93F;
+  color: white;
+  padding-top: 10px;
 }
 
-#listRobots {
-
+.entry_description {
+  padding: 10px;
+  background: #ffffff;
+  margin: 10px;
 }
 
-#navigation {
-  padding-top: 0px;
-  padding-bottom: 9px;
+.left  { 
+  margin-left: 0;
 }
 
-.section {
-  padding-bottom: 21px;
-  padding-top: 21px;
+.right { 
+  margin-right: 0;
 }
 
-.even {
-
-}
-
-.odd {
-  background-color: #eeeeee;
-}
-
-body {
-  margin: 0px;
-  padding: 0px;
-}
-
-/* http://stackoverflow.com/questions/8083430/how-to-change-the-font-and-font-size-of-an-html-input-tag */
-input
-{
-  font-size:40px;
-}
-
-#index_heading {
-  background-color: #eeeeee;
-}

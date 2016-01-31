@@ -6,7 +6,7 @@
   </head>
   <body>
     <div class="content">
-      <div id="listMaterials" class="section">
+      <div>
       {# read about templates http://jinja.pocoo.org/docs/dev/templates/ #}
       {% for category in categories if category.name in overview %}
         <a name="{{ category.name|e }}" href="#{{ category.name|e }}">
@@ -14,20 +14,18 @@
         </a>
         <div class="category_content">
         {% for entry_name, entry in overview[category.name].iteritems() if entry_name != "name" %}
-          <a href="../{{ entry.get("module")|e }}" class="materialLink">
-            <div class="materialEntry">
-              <div class="materialImage">
+          <a href="../{{ entry.get("module")|e }}">
+            <div class="entry">
+<!--              <div>
                 {% if "module" in entry and entry.image %}
                 <img src="../{{ entry.module|e }}/{{ entry.image|e }}" />
                 {% endif %}
+              </div> -->
+              <div class="entry_heading">
+                {{ entry.get("name", entry_name)|e }}
               </div>
-              <div class="materialDescription">
-                <div class="materialName">
-                  {{ entry.get("name", entry_name)|e }}
-                </div>
-                <div class="materialText">
-                  {{ entry.get("text")|e }}
-                </div>
+              <div class="entry_description">
+                {{ entry.get("text")|e }}
               </div>
             </div>
           </a>
