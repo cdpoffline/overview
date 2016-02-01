@@ -14,3 +14,15 @@ echo "
   </body>
 </html>
 " > ../web/offline-materials/index.html
+
+cd ../web
+
+mkdir -p files
+cd files
+
+# CoderDojo logo from https://coderdojo.com/
+[ -f logo.png ] || wget https://coderdojo.com/wp-content/themes/coderdojo/images/logo.png
+
+[ -f favicon.ico ] || wget https://coderdojo.com/favicon.ico
+
+cd .. # web

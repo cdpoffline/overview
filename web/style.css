@@ -23,9 +23,9 @@ a:hover {
   font-size: 30px;
 }
 
-/* ----------------------  ----------------------- */
+/* ---------------------- Material ----------------------- */
 
-.category {
+.category .heading {
   font-size: 40px;
   text-align: center;
   width: 100%;
@@ -36,12 +36,12 @@ a:hover {
   padding-bottom: 10px;
 }
 
-.category_content {
+.category .content {
   margin-left: 10px;
   overflow: hidden; 
 }
 
-.entry {
+.category .entry {
   background: #61C93F;
   margin-bottom: 10px;
   margin-right: 10px;
@@ -50,7 +50,7 @@ a:hover {
   float: left;
 }
 
-.entry_heading {
+.category .entry .heading {
   font-size: 40px;
   text-align: center;
   background: #61C93F;
@@ -58,17 +58,45 @@ a:hover {
   padding-top: 10px;
 }
 
-.entry_description {
+.entry .description {
   padding: 10px;
   background: #ffffff;
   margin: 10px;
 }
 
-.left  { 
-  margin-left: 0;
+/* ---------------------- Header ----------------------- */
+
+.header {
+  width: 100%;
+  margin-bottom: 10px;
 }
 
-.right { 
-  margin-right: 0;
+.header .logo {
+  width: 100%;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  text-align: center;
 }
 
+.header .heading {
+  background: #FACA33;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.header .heading .title {
+  color: #FFFFFF;
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.header .heading .text {
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 10px;
+  background: white;
+  font-size: 30px;
+}

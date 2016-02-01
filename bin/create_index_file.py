@@ -8,6 +8,7 @@ import yaml
 # see http://jinja.pocoo.org/docs/dev/intro/#basic-api-usage
 from jinja2 import Template
 
+DEFAULT_CONFIGURATOIN_FILENAME = "../default.yml"
 CONFIGURATION_FILENAME = "module.yml"
 TEMPLATE_FILE = "../index.html.j2"
 INDEX_FILE = "../web/index.html"
@@ -17,6 +18,7 @@ modules_path = os.path.dirname(os.path.dirname(os.path.join(this_directory)))
 module_names = os.listdir(modules_path)
 template_path = os.path.join(this_directory, TEMPLATE_FILE)
 index_path = os.path.join(this_directory, INDEX_FILE)
+default_configuration_path = os.path.join(this_directory, DEFAULT_CONFIGURATOIN_FILENAME)
 
 # collect variables
 variables = {}
@@ -33,6 +35,8 @@ def add_configuration_file(configuration_filename):
     with open(configuration_filename) as configuration_file:
         module_variables = yaml.load(configuration_file)
     update_variables(module_variables)
+
+add_configuration_file(default_configuration_path)
 
 for module_name in module_names:
     module_path = os.path.join(modules_path, module_name)

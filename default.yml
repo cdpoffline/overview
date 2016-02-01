@@ -1,0 +1,13 @@
+frontpage:
+  heading:
+    logo:
+      alternative_text: ""
+      module: overview
+      path: files/logo.png
+      link: http://coderdojo.com
+    text: Dieses Material steht für das CoderDojo bereit.
+    title: Offline-Material
+  title: Material
+  favicon: 
+    module: overview
+    path: files/favicon.ico

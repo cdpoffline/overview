@@ -2,17 +2,43 @@
   <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="style.css"/>
-    <title>Offline Materials</title>
+    <title>{{ frontpage.title|e }}</title>
   </head>
   <body>
+    <div class="header">
+    {% set heading = frontpage.heading %}
+    {% if heading.logo %}
+      <div class="logo">
+        {% if heading.logo.link %}
+        <a href="{{ heading.logo.link|e }}" name="logo">
+        {% endif %}
+          <img src="../{{ heading.logo.module|e }}/{{ heading.logo.path|e }}" alt="{{ heading.logo.get("alternative_text", frontpage.title)|e }}" />
+        {% if heading.logo.link %}
+        </a>
+        {% endif %}
+      </div>
+    {% endif %}
+      <div class="heading">
+      {% if heading.title %}
+        <div class="title">
+         {{ heading.title|e }}
+        </div>
+      {% endif %}
+      {% if heading.text %}
+        <div class="text">
+         {{ heading.text|e }}
+        </div>
+      {% endif %}
+      </div>
+    </div>
     <div class="content">
-      <div>
       {# read about templates http://jinja.pocoo.org/docs/dev/templates/ #}
       {% for category in categories if category.name in overview %}
+      <div class="category">
         <a name="{{ category.name|e }}" href="#{{ category.name|e }}">
-          <div class="category">{{ category.get("text", category.name)|e }}</div>
+          <div class="heading">{{ category.get("text", category.name)|e }}</div>
         </a>
-        <div class="category_content">
+        <div class="content">
         {% for entry_name, entry in overview[category.name].iteritems() if entry_name != "name" %}
           <a href="../{{ entry.get("module")|e }}">
             <div class="entry">
@@ -21,10 +47,10 @@
                 <img src="../{{ entry.module|e }}/{{ entry.image|e }}" />
                 {% endif %}
               </div> -->
-              <div class="entry_heading">
+              <div class="heading">
                 {{ entry.get("name", entry_name)|e }}
               </div>
-              <div class="entry_description">
+              <div class="description">
                 {{ entry.get("text")|e }}
               </div>
             </div>
