@@ -83,8 +83,8 @@ a:hover {
   width: 100%;
   text-align: center;
   margin-bottom: 10px;
-  padding-bottom: 10px;
   padding-top: 10px;
+  overflow: hidden;
 }
 
 .header .heading .title {
@@ -99,4 +99,5 @@ a:hover {
   padding: 10px;
   background: white;
   font-size: 30px;
+  margin-bottom: 10px;
 }

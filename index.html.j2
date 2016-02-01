@@ -18,6 +18,7 @@
         {% endif %}
       </div>
     {% endif %}
+    {% if heading.title or heading.text %}
       <div class="heading">
       {% if heading.title %}
         <div class="title">
@@ -30,6 +31,7 @@
         </div>
       {% endif %}
       </div>
+    {% endif %}
     </div>
     <div class="content">
       {# read about templates http://jinja.pocoo.org/docs/dev/templates/ #}
