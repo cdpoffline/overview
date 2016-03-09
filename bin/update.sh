@@ -10,7 +10,7 @@ echo "
     <meta http-equiv=refresh content='0; url=overview' />
   </head>
   <body>
-    <h1><a href="overview">overview</a></h1>
+    <h1><a href=\"overview\">overview</a></h1>
   </body>
 </html>
 " > ../web/offline-materials/index.html
