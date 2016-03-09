@@ -2,7 +2,7 @@
   <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="style.css"/>
-    <title>{{ frontpage.title|e }}</title>
+    <title>{{ frontpage.title|t|e }}</title>
   {% if frontpage.favicon %}
     <link rel="icon" type="image/ico" href="../{{ frontpage.favicon.module|e }}/{{ frontpage.favicon.path|e }}">
   {% endif %}
@@ -25,12 +25,12 @@
       <div class="heading">
       {% if heading.title %}
         <div class="title">
-         {{ heading.title|e }}
+         {{ heading.title|t|e }}
         </div>
       {% endif %}
       {% if heading.text %}
         <div class="text">
-         {{ heading.text|e }}
+         {{ heading.text|t|e }}
         </div>
       {% endif %}
       </div>
@@ -53,10 +53,10 @@
                 {% endif %}
               </div> -->
               <div class="heading">
-                {{ entry.get("name", entry_name)|e }}
+                {{ entry.get("name", entry_name)|t|e }}
               </div>
               <div class="description">
-                {{ entry.get("text")|e }}
+                {{ entry.get("text")|t|e }}
               </div>
             </div>
           </a>

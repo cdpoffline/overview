@@ -11,3 +11,5 @@ frontpage:
   favicon: 
     module: overview
     path: files/favicon.ico
+
+default-language: en-en
