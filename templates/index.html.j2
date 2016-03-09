@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="index.css"/>
+    <title>{{ frontpage.title|t|e }}</title>
+  {% if frontpage.favicon %}
+    <link rel="icon" type="image/ico" href="../../{{ frontpage.favicon.module|e }}/{{ frontpage.favicon.path|e }}">
+  {% endif %}
+  </head>
+  <body>
+    <div class="translations">
+    {% for language in languages %}
+      <div class="translation">
+        <a href="./menu/{{ language|e }}.html">
+        {% if language in translations.names %}
+          {{ translations.names[language]|e }}
+        {% else %}
+          {{ language }}
+        {% endif %}
+        </a>
+      </div>
+    {% endfor %}
+    </div>
+  </body>
+</html>

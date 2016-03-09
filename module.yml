@@ -1,12 +1,26 @@
 categories:
   - name: beginners
-    text: Anfänger  
+    text: 
+      en-en: Beginners
+      de-de: Anfänger  
   - name: blocks
-    text: Blöcke
+    text: 
+      en-en: Blocks
+      de-de: Blöcke
   - name: syntax
-    text: Syntax
+    text: 
+      en-en: Syntax
+      de-de: Syntax
   - name: hardware
-    text: Hardware
+    text: 
+      en-en: Hardware
+      de-de: Hardware
   - name: tools
-    text: Werkzeuge
+    text: 
+      en-en: Tools
+      de-de: Werkzeuge
 
+translations:
+  names:
+    en-en: English
+    de-de: Deutsch

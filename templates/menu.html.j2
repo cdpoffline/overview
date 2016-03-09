@@ -1,10 +1,10 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="../menu.css"/>
     <title>{{ frontpage.title|t|e }}</title>
   {% if frontpage.favicon %}
-    <link rel="icon" type="image/ico" href="../{{ frontpage.favicon.module|e }}/{{ frontpage.favicon.path|e }}">
+    <link rel="icon" type="image/ico" href="../../{{ frontpage.favicon.module|e }}/{{ frontpage.favicon.path|e }}">
   {% endif %}
   </head>
   <body>
@@ -15,7 +15,7 @@
         {% if heading.logo.link %}
         <a href="{{ heading.logo.link|e }}" name="logo">
         {% endif %}
-          <img src="../{{ heading.logo.module|e }}/{{ heading.logo.path|e }}" alt="{{ heading.logo.get("alternative_text", frontpage.title)|e }}" />
+          <img src="../../{{ heading.logo.module|e }}/{{ heading.logo.path|e }}" alt="{{ heading.logo.get("alternative_text", frontpage.title)|t|e }}" />
         {% if heading.logo.link %}
         </a>
         {% endif %}
@@ -41,15 +41,15 @@
       {% for category in categories if category.name in overview %}
       <div class="category">
         <a name="{{ category.name|e }}" href="#{{ category.name|e }}">
-          <div class="heading">{{ category.get("text", category.name)|e }}</div>
+          <div class="heading">{{ category.text|t|e }}</div>
         </a>
         <div class="content">
         {% for entry_name, entry in overview[category.name].iteritems() if entry_name != "name" %}
-          <a href="../{{ entry.get("module")|e }}">
+          <a href="../../{{ entry.get("module")|e }}">
             <div class="entry">
 <!--              <div>
                 {% if "module" in entry and entry.image %}
-                <img src="../{{ entry.module|e }}/{{ entry.image|e }}" />
+                <img src="../../{{ entry.module|e }}/{{ entry.image|e }}" />
                 {% endif %}
               </div> -->
               <div class="heading">

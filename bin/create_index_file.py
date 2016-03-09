@@ -14,13 +14,13 @@ MENU_TEMPLATE = "menu.html.j2"
 TEMPLATE_FOLDER = "../templates"
 INDEX_FILE = "../web/index.html"
 INDEX_FOLDER = "../web/menu"
-
+INDEX_TEMPLATE = "index.html.j2"
 
 this_directory = sys.argv[1]
 modules_path = os.path.dirname(os.path.dirname(os.path.join(this_directory)))
 module_names = os.listdir(modules_path)
 template_path = os.path.join(this_directory, TEMPLATE_FOLDER)
-index_path = os.path.join(this_directory, INDEX_FILE)
+index_file_path = os.path.join(this_directory, INDEX_FILE)
 index_folder_path = os.path.join(this_directory, INDEX_FOLDER)
 template_folder_path = os.path.join(this_directory, TEMPLATE_FOLDER)
 default_configuration_path = os.path.join(this_directory, DEFAULT_CONFIGURATOIN_FILENAME)
@@ -102,6 +102,9 @@ for language in languages:
     with open(file_path, "w") as index_file:
         index_file.write(template.render(variables).encode("UTF-8"))
 
+template = env.get_template(INDEX_TEMPLATE)
+with open(index_file_path, "w") as index_file:
+    index_file.write(template.render(variables).encode("UTF-8"))
 
 
 
