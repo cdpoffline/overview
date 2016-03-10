@@ -1,4 +1,10 @@
 # overview
-Dieses Repository verschafft einen Überblick über die Materialien.
+
+This module generates the overview page over all the available tutorials and materials.
 
 ![This Image shows the web site.](overview.png)
+
+## Usage
+
+Each module has a [`module.yml`](./module.yml) file. The contents are loaded all together and a [template](./templates) is rendered for each occurring language.
+
