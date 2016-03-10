@@ -79,6 +79,8 @@ template.render(variables)
 # render languages
 
 def translate(s):
+    if isinstance(s, type("")) or isinstance(s, type(u"")):
+        return s
     if not isinstance(s, dict):
         raise TranslationError("Cannot translate \"{}\". It should be an mapping from language to text.".format(s))
     if language in s:

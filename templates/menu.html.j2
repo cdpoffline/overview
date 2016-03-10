@@ -13,7 +13,7 @@
     {% if heading.logo %}
       <div class="logo">
         {% if heading.logo.link %}
-        <a href="{{ heading.logo.link|e }}" name="logo">
+        <a href="{{ heading.logo.link|t|e }}" name="logo">
         {% endif %}
           <img src="../../{{ heading.logo.module|e }}/{{ heading.logo.path|e }}" alt="{{ heading.logo.get("alternative_text", frontpage.title)|t|e }}" />
         {% if heading.logo.link %}
@@ -45,11 +45,11 @@
         </a>
         <div class="content">
         {% for entry_name, entry in overview[category.name].iteritems() if entry_name != "name" %}
-          <a href="../../{{ entry.get("module")|e }}">
+          <a href="../../{{ entry.get("module")|e }}/{{ entry.get("start", "")|t|e }}">
             <div class="entry">
 <!--              <div>
                 {% if "module" in entry and entry.image %}
-                <img src="../../{{ entry.module|e }}/{{ entry.image|e }}" />
+                <img src="../../{{ entry.module|e }}/{{ entry.image|t|e }}" />
                 {% endif %}
               </div> -->
               <div class="heading">
