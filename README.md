@@ -1,8 +1,8 @@
 # overview
 
-This module generates the overview page over all the available tutorials and materials.
+This module generates the overview page over all the available tutorials and materials. You can try out the static example version by clicking the image below:
 
-![This Image shows the web site.](overview.png)
+[![This Image shows the web site.](overview.png)](http://cdpoffline.github.io/try-it/)
 
 ## Usage
 
