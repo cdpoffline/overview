@@ -2,25 +2,31 @@ categories:
   - name: beginners
     text: 
       en-en: Beginners
-      de-de: Anfänger  
+      de-de: Anfänger
+      it-it: Principianti  
   - name: blocks
     text: 
       en-en: Blocks
       de-de: Blöcke
+      it-it: Programma con i Blocchi
   - name: syntax
     text: 
       en-en: Syntax
       de-de: Syntax
+      it-it: Sintassi
   - name: hardware
     text: 
       en-en: Hardware
       de-de: Hardware
+      it-it: Hardware
   - name: tools
     text: 
       en-en: Tools
       de-de: Werkzeuge
+      it-it: Strumenti
 
 translations:
   names:
     en-en: English
     de-de: Deutsch
+    it-it: Italiano

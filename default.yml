@@ -9,12 +9,15 @@ frontpage:
     text: 
       en-en: This material can be used at the CoderDojo.
       de-de: Dieses Material steht für das CoderDojo bereit.
+      it-it: Materiali per Coderdojo
     title: 
       en-en: Offline Material
       de-de: Offline-Material
+      it-it: Materiali Offline
   title: 
     en-en: Material
     de-de: Material
+    it-it: Materiali
   favicon: 
     module: overview
     path: files/favicon.ico
